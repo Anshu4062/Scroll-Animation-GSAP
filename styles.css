@@ -1,0 +1,98 @@
+@font-face {
+    font-family: 'NeueMontreal';
+    src: url('/fonts/NeueMontreal-Bold.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: "NeueMontreal";
+    overscroll-behavior: none;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+p {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.sticky-bar {
+    position: fixed;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 1em;
+    display: flex;
+    mix-blend-mode: difference;
+}
+
+.sticky-bar .item:nth-child(1),
+.sticky-bar .item:nth-child(3) {
+    flex: 2;
+}
+
+.sticky-bar .item:nth-child(3) {
+    text-align: right;
+}
+
+.sticky-bar .item:nth-child(2) {
+    flex: 1;
+    text-align: center;
+}
+
+.sticky-bar .item p {
+    color: #fff;
+    font-size: 1.25vw;
+}
+
+section.hero {
+    width: 100vw;
+    height: 100vh;
+}
+
+.clients {
+    width: 100%;
+    padding: 10em 1em;
+    background: #fff;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.logo p {
+    font-size: 40px;
+}
+
+section.trigger-footer {
+    width: 100%;
+    height: 300vh;
+    background: #000;
+}
+
+@media(max-width: 900px) {
+    .sticky-bar .item p {
+        font-size: 2.5vw;
+    }
+
+    .logo p {
+        font-size: 20px;
+    }
+}
